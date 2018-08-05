@@ -96,7 +96,7 @@ public class uploader extends HttpServlet {
         {
         	String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu06?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             String username = "cs3220stu06";
-            String password = "wzlZ8.5p";
+            String password = "*****";
 
             String sql = "insert into uploads (fileName, filePath) values (?, ?)";
 
