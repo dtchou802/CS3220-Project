@@ -37,7 +37,7 @@ public class Download extends HttpServlet {
 	    {
 	        String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu12?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	        String username = "cs3220stu12";
-	        String password = "EOZ6mrUV";
+	        String password = "****";
 	
 	        c = DriverManager.getConnection(url, username, password);
 	        Statement stmt = c.createStatement();
