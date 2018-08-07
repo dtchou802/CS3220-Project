@@ -33,19 +33,17 @@ public class Search extends HttpServlet {
 	    {
 	        String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu12?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	        String username = "cs3220stu12";
-	        String password = "EOZ6mrUV";
+	        String password = "****";
 	
-	        String sql = "SELECT * FROM uploads WHERE fileName = ?";
+	        String sql = "SELECT * FROM uploads WHERE fileName LIKE '%" + searchName + "%'";
 	
 	        c = DriverManager.getConnection(url, username, password);
 	        PreparedStatement pstmt = c.prepareStatement(sql);
-	        pstmt.setString(1, searchName);
 	        ResultSet rs = pstmt.executeQuery();
 	
 	        while(rs.next()) {
                 Upload file = new Upload( Integer.parseInt(rs.getString("id")), rs.getString("fileName"), rs.getString("filePath"));
                 files.add(file);
-                System.out.println(file.getFileName());
 	        }
 	    }
 	    catch(SQLException e)
