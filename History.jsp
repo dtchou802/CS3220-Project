@@ -17,6 +17,7 @@
 			<th>ID</th>
 			<th>File Name</th>
 			<th>File Path</th>
+			<th>Date</th>
 			<th>Options</th>
 		</tr>
 		
