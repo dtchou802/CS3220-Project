@@ -10,7 +10,7 @@
 <body>
 
 <c:choose>
-	<c:when test="${files.size() > 1}">
+	<c:when test="${files.size() > 0}">
 	
 		<table border="1" style="border-collapse: collapse;text-align: left;">
 		<tr>
@@ -28,9 +28,7 @@
 			<td>${file.filePath}</td>
 			<td>${file.date}</td>
 			<td>
-				<a href="Delete?id=${file.id}">Delete</a>
 				<a href="Download?id=${file.id}">Download</a> 
-				<a href="Update?id=${file.id}">Update</a>
 			</td>
 		</tr>
 		</c:forEach>
