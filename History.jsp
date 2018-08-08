@@ -25,6 +25,7 @@
 			<td>${file.id}</td>
 			<td>${file.fileName}</td>
 			<td>${file.filePath}</td>
+			<td>${file.date}</td>
 			<td>
 				<a href="Delete?id=${file.id}">Delete</a>
 				<a href="Download?id=${file.id}">Download</a> 
