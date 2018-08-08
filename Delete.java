@@ -26,7 +26,7 @@ public class Delete extends HttpServlet {
 	    {
 	        String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu12?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	        String username = "cs3220stu12";
-	        String password = "****";
+	        String password = "EOZ6mrUV";
 	
 	        String sql = "select * from uploads where id = ?";
 	
@@ -60,14 +60,13 @@ public class Delete extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.valueOf(request.getParameter("id"));
         Upload file = getFile(id);
-
         Connection c = null;
         
         try
         {
 	        String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu12?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	        String username = "cs3220stu12";
-	        String password = "****";
+	        String password = "EOZ6mrUV";
 
             String sql = "delete from uploads where id =" + id;
 
@@ -102,3 +101,4 @@ public class Delete extends HttpServlet {
     }
 
 }
+
