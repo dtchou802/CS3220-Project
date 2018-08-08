@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<table border="1">
+	<table border="1" style="border-collapse: collapse;text-align: left;">
 		<tr>
 			<th>ID</th>
 			<th>File Name</th>
@@ -22,16 +22,22 @@
 				<td>${file.id}</td>
 				<td>${file.fileName}</td>
 				<td>${file.filePath}</td>
-				<td><a href="Delete?id=${file.id}">Delete</a><a
-					href="Download?id=${file.id}"> Download</a> <a
-					href="Update?id=${file.id}"> Update</a></td>
+				<td><a href="Delete?id=${file.id}">Delete</a>
+					<a href="Download?id=${file.id}">Download</a> 
+					<a href="Update?id=${file.id}">Update</a>
+					<a href="History?id=${file.id}">History</a>
+			    </td>
 			</tr>
 		</c:forEach>
-	</table>
+	</table><br />
 
 	<form action="uploader" method="post" enctype="multipart/form-data">
 		<input type='file' name='fileUp' /> <br /> 
 		File Name: <input type="text" name="name" /> <input type="submit" value="Upload" />
+	</form><br />
+	
+	<form action="Search" method="post">
+		Search: <input type="text" name="searchName" /> <input type="submit" value="Search" />
 	</form>
 
 </body>
