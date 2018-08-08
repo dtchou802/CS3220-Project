@@ -1,9 +1,10 @@
-package model;
+package dbs;
 
 public class Upload {
 	String fileName;
 	String filePath;
 	String action;
+	String date;
 	int id;
 	
 	
@@ -19,6 +20,14 @@ this.fileName = fileName;
 this.filePath = filePath;
 this.action = action;
 this.id = id;
+}
+
+public Upload(int id, String fileName, String filePath, String date) {
+this.fileName = fileName;
+this.filePath = filePath;
+this.action = action;
+this.id = id;
+this.date = date;
 }
 
 
@@ -62,5 +71,13 @@ public void setAction(String action) {
 	this.action = action;
 }
 
+public String getDate() {
+	return date;
+}
+
+
+public void setDate(String date) {
+	this.date = date;
+}
 
 }
