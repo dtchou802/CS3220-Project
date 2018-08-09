@@ -29,7 +29,7 @@ public class Delete extends HttpServlet {
 		try {
 			String url = "jdbc:mysql://cs3.calstatela.edu:3306/cs3220stu06?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 			String username = "cs3220stu06";
-			String password = "wzlZ8.5p";
+			String password = "****";
 
 			String sql = "delete from uploads where id =" + id;
 
